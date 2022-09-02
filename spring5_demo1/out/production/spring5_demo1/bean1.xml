@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--        配置User对象创建-->
+<!--    <bean id="user" class="com.atguigu.spring5.User"></bean>-->
+<!--    2 set方法注入属性-->
+    <bean id="book" class="com.atguigu.spring5.Book">
+        <property name="bname" value="易筋经"></property>
+        <property name="bauthor" value="达摩老祖"></property>
+<!--        向属性设置空值-->
+        <property name="address" ><null/></property>
+<!--        设置的属性值带有特殊符号-->
+<!--        <property name="id"><value><![CDATA[<<南京>>]]></value>></property>-->
+        <property name="id"><value><![CDATA[<<南京>>]]></value></property>
+    </bean>
+
+<!--  3 有参数构造注入属性  -->
+<!--    <bean id="order" class="com.atguigu.spring5.Orders">-->
+<!--        <constructor-arg name="oname" value="电脑"></constructor-arg>-->
+<!--        <constructor-arg name="address" value="china"></constructor-arg>-->
+<!--    </bean>-->
+</beans>
